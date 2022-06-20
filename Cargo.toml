@@ -1,15 +1,12 @@
 [package]
 authors = [
-    "Vadzim Dambrouski <pftbest@gmail.com>",
-    "Jorge Aparicio <jorge@japaric.io>"
+    "Ryan Williams"
 ]
-description = "Peripheral access API for MSP430G2553 microcontroller"
-documentation = "https://docs.rs/msp430g2553"
+description = "Peripheral access API for MSP430f6736a microcontroller"
 keywords = ["no-std", "msp430", "ti", "launchpad"]
 license = "MIT OR Apache-2.0"
-name = "msp430g2553"
-repository = "https://github.com/pftbest/msp430g2553"
-version = "0.3.0"
+name = "msp430f6736a"
+version = "0.1.1"
 edition = "2021"
 
 [dependencies]

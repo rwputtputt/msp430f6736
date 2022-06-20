@@ -34,428 +34,120 @@ impl From<crate::W<P2IFG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `P0` reader - P0"]
-pub struct P0_R(crate::FieldReader<bool, bool>);
-impl P0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P0` writer - P0"]
-pub struct P0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
-#[doc = "Field `P1` reader - P1"]
-pub struct P1_R(crate::FieldReader<bool, bool>);
-impl P1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P1` writer - P1"]
-pub struct P1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Field `P2` reader - P2"]
-pub struct P2_R(crate::FieldReader<bool, bool>);
-impl P2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P2` writer - P2"]
-pub struct P2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `P3` reader - P3"]
-pub struct P3_R(crate::FieldReader<bool, bool>);
-impl P3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P3` writer - P3"]
-pub struct P3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `P4` reader - P4"]
-pub struct P4_R(crate::FieldReader<bool, bool>);
-impl P4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P4` writer - P4"]
-pub struct P4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `P5` reader - P5"]
-pub struct P5_R(crate::FieldReader<bool, bool>);
-impl P5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P5` writer - P5"]
-pub struct P5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `P6` reader - P6"]
-pub struct P6_R(crate::FieldReader<bool, bool>);
-impl P6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P6` writer - P6"]
-pub struct P6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Field `P7` reader - P7"]
-pub struct P7_R(crate::FieldReader<bool, bool>);
-impl P7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P7` writer - P7"]
-pub struct P7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits =
-            (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `P2IFG` reader - Port 2 Interrupt Flag register"]
-pub struct P2IFG_R(crate::FieldReader<u8, u8>);
-impl P2IFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        P2IFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IFG_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `P2IFG` writer - Port 2 Interrupt Flag register"]
-pub struct P2IFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IFG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = value as u8;
-        self.w
-    }
-}
+#[doc = "Field `P2IFG0` reader - P2IFG0"]
+pub type P2IFG0_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG0` writer - P2IFG0"]
+pub type P2IFG0_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 0>;
+#[doc = "Field `P2IFG1` reader - P2IFG1"]
+pub type P2IFG1_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG1` writer - P2IFG1"]
+pub type P2IFG1_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 1>;
+#[doc = "Field `P2IFG2` reader - P2IFG2"]
+pub type P2IFG2_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG2` writer - P2IFG2"]
+pub type P2IFG2_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 2>;
+#[doc = "Field `P2IFG3` reader - P2IFG3"]
+pub type P2IFG3_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG3` writer - P2IFG3"]
+pub type P2IFG3_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 3>;
+#[doc = "Field `P2IFG4` reader - P2IFG4"]
+pub type P2IFG4_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG4` writer - P2IFG4"]
+pub type P2IFG4_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 4>;
+#[doc = "Field `P2IFG5` reader - P2IFG5"]
+pub type P2IFG5_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG5` writer - P2IFG5"]
+pub type P2IFG5_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 5>;
+#[doc = "Field `P2IFG6` reader - P2IFG6"]
+pub type P2IFG6_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG6` writer - P2IFG6"]
+pub type P2IFG6_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 6>;
+#[doc = "Field `P2IFG7` reader - P2IFG7"]
+pub type P2IFG7_R = crate::BitReader<bool>;
+#[doc = "Field `P2IFG7` writer - P2IFG7"]
+pub type P2IFG7_W<'a> = crate::BitWriter<'a, u8, P2IFG_SPEC, bool, 7>;
 impl R {
-    #[doc = "Bit 0 - P0"]
+    #[doc = "Bit 0 - P2IFG0"]
     #[inline(always)]
-    pub fn p0(&self) -> P0_R {
-        P0_R::new((self.bits & 0x01) != 0)
+    pub fn p2ifg0(&self) -> P2IFG0_R {
+        P2IFG0_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - P1"]
+    #[doc = "Bit 1 - P2IFG1"]
     #[inline(always)]
-    pub fn p1(&self) -> P1_R {
-        P1_R::new(((self.bits >> 1) & 0x01) != 0)
+    pub fn p2ifg1(&self) -> P2IFG1_R {
+        P2IFG1_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - P2"]
+    #[doc = "Bit 2 - P2IFG2"]
     #[inline(always)]
-    pub fn p2(&self) -> P2_R {
-        P2_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn p2ifg2(&self) -> P2IFG2_R {
+        P2IFG2_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - P3"]
+    #[doc = "Bit 3 - P2IFG3"]
     #[inline(always)]
-    pub fn p3(&self) -> P3_R {
-        P3_R::new(((self.bits >> 3) & 0x01) != 0)
+    pub fn p2ifg3(&self) -> P2IFG3_R {
+        P2IFG3_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - P4"]
+    #[doc = "Bit 4 - P2IFG4"]
     #[inline(always)]
-    pub fn p4(&self) -> P4_R {
-        P4_R::new(((self.bits >> 4) & 0x01) != 0)
+    pub fn p2ifg4(&self) -> P2IFG4_R {
+        P2IFG4_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - P5"]
+    #[doc = "Bit 5 - P2IFG5"]
     #[inline(always)]
-    pub fn p5(&self) -> P5_R {
-        P5_R::new(((self.bits >> 5) & 0x01) != 0)
+    pub fn p2ifg5(&self) -> P2IFG5_R {
+        P2IFG5_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - P6"]
+    #[doc = "Bit 6 - P2IFG6"]
     #[inline(always)]
-    pub fn p6(&self) -> P6_R {
-        P6_R::new(((self.bits >> 6) & 0x01) != 0)
+    pub fn p2ifg6(&self) -> P2IFG6_R {
+        P2IFG6_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - P7"]
+    #[doc = "Bit 7 - P2IFG7"]
     #[inline(always)]
-    pub fn p7(&self) -> P7_R {
-        P7_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bits 0:7 - Port 2 Interrupt Flag register"]
-    #[inline(always)]
-    pub fn p2ifg(&self) -> P2IFG_R {
-        P2IFG_R::new(self.bits as u8)
+    pub fn p2ifg7(&self) -> P2IFG7_R {
+        P2IFG7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - P0"]
+    #[doc = "Bit 0 - P2IFG0"]
     #[inline(always)]
-    pub fn p0(&mut self) -> P0_W {
-        P0_W { w: self }
+    pub fn p2ifg0(&mut self) -> P2IFG0_W {
+        P2IFG0_W::new(self)
     }
-    #[doc = "Bit 1 - P1"]
+    #[doc = "Bit 1 - P2IFG1"]
     #[inline(always)]
-    pub fn p1(&mut self) -> P1_W {
-        P1_W { w: self }
+    pub fn p2ifg1(&mut self) -> P2IFG1_W {
+        P2IFG1_W::new(self)
     }
-    #[doc = "Bit 2 - P2"]
+    #[doc = "Bit 2 - P2IFG2"]
     #[inline(always)]
-    pub fn p2(&mut self) -> P2_W {
-        P2_W { w: self }
+    pub fn p2ifg2(&mut self) -> P2IFG2_W {
+        P2IFG2_W::new(self)
     }
-    #[doc = "Bit 3 - P3"]
+    #[doc = "Bit 3 - P2IFG3"]
     #[inline(always)]
-    pub fn p3(&mut self) -> P3_W {
-        P3_W { w: self }
+    pub fn p2ifg3(&mut self) -> P2IFG3_W {
+        P2IFG3_W::new(self)
     }
-    #[doc = "Bit 4 - P4"]
+    #[doc = "Bit 4 - P2IFG4"]
     #[inline(always)]
-    pub fn p4(&mut self) -> P4_W {
-        P4_W { w: self }
+    pub fn p2ifg4(&mut self) -> P2IFG4_W {
+        P2IFG4_W::new(self)
     }
-    #[doc = "Bit 5 - P5"]
+    #[doc = "Bit 5 - P2IFG5"]
     #[inline(always)]
-    pub fn p5(&mut self) -> P5_W {
-        P5_W { w: self }
+    pub fn p2ifg5(&mut self) -> P2IFG5_W {
+        P2IFG5_W::new(self)
     }
-    #[doc = "Bit 6 - P6"]
+    #[doc = "Bit 6 - P2IFG6"]
     #[inline(always)]
-    pub fn p6(&mut self) -> P6_W {
-        P6_W { w: self }
+    pub fn p2ifg6(&mut self) -> P2IFG6_W {
+        P2IFG6_W::new(self)
     }
-    #[doc = "Bit 7 - P7"]
+    #[doc = "Bit 7 - P2IFG7"]
     #[inline(always)]
-    pub fn p7(&mut self) -> P7_W {
-        P7_W { w: self }
-    }
-    #[doc = "Bits 0:7 - Port 2 Interrupt Flag register"]
-    #[inline(always)]
-    pub fn p2ifg(&mut self) -> P2IFG_W {
-        P2IFG_W { w: self }
+    pub fn p2ifg7(&mut self) -> P2IFG7_W {
+        P2IFG7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

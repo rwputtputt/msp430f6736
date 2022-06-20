@@ -34,45 +34,148 @@ impl From<crate::W<UCB0I2CSA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `UCSA` reader - I2C Slave Address 0"]
-pub struct UCSA_R(crate::FieldReader<u16, u16>);
-impl UCSA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        UCSA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCSA_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `UCSA` writer - I2C Slave Address 0"]
-pub struct UCSA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCSA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u16 & 0x03ff);
-        self.w
-    }
-}
+#[doc = "Field `UCSA0` reader - I2C Slave Address Bit 0"]
+pub type UCSA0_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA0` writer - I2C Slave Address Bit 0"]
+pub type UCSA0_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 0>;
+#[doc = "Field `UCSA1` reader - I2C Slave Address Bit 1"]
+pub type UCSA1_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA1` writer - I2C Slave Address Bit 1"]
+pub type UCSA1_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 1>;
+#[doc = "Field `UCSA2` reader - I2C Slave Address Bit 2"]
+pub type UCSA2_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA2` writer - I2C Slave Address Bit 2"]
+pub type UCSA2_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 2>;
+#[doc = "Field `UCSA3` reader - I2C Slave Address Bit 3"]
+pub type UCSA3_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA3` writer - I2C Slave Address Bit 3"]
+pub type UCSA3_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 3>;
+#[doc = "Field `UCSA4` reader - I2C Slave Address Bit 4"]
+pub type UCSA4_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA4` writer - I2C Slave Address Bit 4"]
+pub type UCSA4_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 4>;
+#[doc = "Field `UCSA5` reader - I2C Slave Address Bit 5"]
+pub type UCSA5_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA5` writer - I2C Slave Address Bit 5"]
+pub type UCSA5_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 5>;
+#[doc = "Field `UCSA6` reader - I2C Slave Address Bit 6"]
+pub type UCSA6_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA6` writer - I2C Slave Address Bit 6"]
+pub type UCSA6_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 6>;
+#[doc = "Field `UCSA7` reader - I2C Slave Address Bit 7"]
+pub type UCSA7_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA7` writer - I2C Slave Address Bit 7"]
+pub type UCSA7_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 7>;
+#[doc = "Field `UCSA8` reader - I2C Slave Address Bit 8"]
+pub type UCSA8_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA8` writer - I2C Slave Address Bit 8"]
+pub type UCSA8_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 8>;
+#[doc = "Field `UCSA9` reader - I2C Slave Address Bit 9"]
+pub type UCSA9_R = crate::BitReader<bool>;
+#[doc = "Field `UCSA9` writer - I2C Slave Address Bit 9"]
+pub type UCSA9_W<'a> = crate::BitWriter<'a, u16, UCB0I2CSA_SPEC, bool, 9>;
 impl R {
-    #[doc = "Bits 0:9 - I2C Slave Address 0"]
+    #[doc = "Bit 0 - I2C Slave Address Bit 0"]
     #[inline(always)]
-    pub fn ucsa(&self) -> UCSA_R {
-        UCSA_R::new((self.bits & 0x03ff) as u16)
+    pub fn ucsa0(&self) -> UCSA0_R {
+        UCSA0_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - I2C Slave Address Bit 1"]
+    #[inline(always)]
+    pub fn ucsa1(&self) -> UCSA1_R {
+        UCSA1_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - I2C Slave Address Bit 2"]
+    #[inline(always)]
+    pub fn ucsa2(&self) -> UCSA2_R {
+        UCSA2_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - I2C Slave Address Bit 3"]
+    #[inline(always)]
+    pub fn ucsa3(&self) -> UCSA3_R {
+        UCSA3_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - I2C Slave Address Bit 4"]
+    #[inline(always)]
+    pub fn ucsa4(&self) -> UCSA4_R {
+        UCSA4_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - I2C Slave Address Bit 5"]
+    #[inline(always)]
+    pub fn ucsa5(&self) -> UCSA5_R {
+        UCSA5_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - I2C Slave Address Bit 6"]
+    #[inline(always)]
+    pub fn ucsa6(&self) -> UCSA6_R {
+        UCSA6_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - I2C Slave Address Bit 7"]
+    #[inline(always)]
+    pub fn ucsa7(&self) -> UCSA7_R {
+        UCSA7_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - I2C Slave Address Bit 8"]
+    #[inline(always)]
+    pub fn ucsa8(&self) -> UCSA8_R {
+        UCSA8_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - I2C Slave Address Bit 9"]
+    #[inline(always)]
+    pub fn ucsa9(&self) -> UCSA9_R {
+        UCSA9_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bits 0:9 - I2C Slave Address 0"]
+    #[doc = "Bit 0 - I2C Slave Address Bit 0"]
     #[inline(always)]
-    pub fn ucsa(&mut self) -> UCSA_W {
-        UCSA_W { w: self }
+    pub fn ucsa0(&mut self) -> UCSA0_W {
+        UCSA0_W::new(self)
+    }
+    #[doc = "Bit 1 - I2C Slave Address Bit 1"]
+    #[inline(always)]
+    pub fn ucsa1(&mut self) -> UCSA1_W {
+        UCSA1_W::new(self)
+    }
+    #[doc = "Bit 2 - I2C Slave Address Bit 2"]
+    #[inline(always)]
+    pub fn ucsa2(&mut self) -> UCSA2_W {
+        UCSA2_W::new(self)
+    }
+    #[doc = "Bit 3 - I2C Slave Address Bit 3"]
+    #[inline(always)]
+    pub fn ucsa3(&mut self) -> UCSA3_W {
+        UCSA3_W::new(self)
+    }
+    #[doc = "Bit 4 - I2C Slave Address Bit 4"]
+    #[inline(always)]
+    pub fn ucsa4(&mut self) -> UCSA4_W {
+        UCSA4_W::new(self)
+    }
+    #[doc = "Bit 5 - I2C Slave Address Bit 5"]
+    #[inline(always)]
+    pub fn ucsa5(&mut self) -> UCSA5_W {
+        UCSA5_W::new(self)
+    }
+    #[doc = "Bit 6 - I2C Slave Address Bit 6"]
+    #[inline(always)]
+    pub fn ucsa6(&mut self) -> UCSA6_W {
+        UCSA6_W::new(self)
+    }
+    #[doc = "Bit 7 - I2C Slave Address Bit 7"]
+    #[inline(always)]
+    pub fn ucsa7(&mut self) -> UCSA7_W {
+        UCSA7_W::new(self)
+    }
+    #[doc = "Bit 8 - I2C Slave Address Bit 8"]
+    #[inline(always)]
+    pub fn ucsa8(&mut self) -> UCSA8_W {
+        UCSA8_W::new(self)
+    }
+    #[doc = "Bit 9 - I2C Slave Address Bit 9"]
+    #[inline(always)]
+    pub fn ucsa9(&mut self) -> UCSA9_W {
+        UCSA9_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
