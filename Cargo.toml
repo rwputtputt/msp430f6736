@@ -6,7 +6,7 @@ description = "Peripheral access API for MSP430f6736a microcontroller"
 keywords = ["no-std", "msp430", "ti", "launchpad"]
 license = "MIT OR Apache-2.0"
 name = "msp430f6736a"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 repository = "https://github.com/ryandedesignworks/msp430f6736a"
 
