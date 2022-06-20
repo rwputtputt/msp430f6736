@@ -8,6 +8,7 @@ license = "MIT OR Apache-2.0"
 name = "msp430f6736a"
 version = "0.1.1"
 edition = "2021"
+repository = "https://github.com/ryandedesignworks/msp430f6736a"
 
 [dependencies]
 bare-metal = "1.0.0"
