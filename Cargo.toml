@@ -2,13 +2,13 @@
 authors = [
     "Ryan Williams"
 ]
-description = "Peripheral access API for MSP430f6736a microcontroller"
+description = "Peripheral access API for MSP430f6736 microcontroller"
 keywords = ["no-std", "msp430", "ti", "launchpad"]
 license = "MIT OR Apache-2.0"
-name = "msp430f6736a"
-version = "0.1.2"
+name = "msp430f6736"
+version = "0.1.1"
 edition = "2021"
-repository = "https://github.com/ryandedesignworks/msp430f6736a"
+repository = "https://github.com/ryandedesignworks/msp430f6736"
 
 [dependencies]
 bare-metal = "1.0.0"
