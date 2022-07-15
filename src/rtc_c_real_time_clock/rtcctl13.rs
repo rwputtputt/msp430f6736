@@ -284,10 +284,6 @@ impl<'a> RTCCALF_W<'a> {
         self.variant(RTCCALF_A::RTCCALF_3)
     }
 }
-#[doc = "Field `RTCLOCK` reader - RTC Real-Time clock lock"]
-pub type RTCLOCK_R = crate::BitReader<bool>;
-#[doc = "Field `RTCLOCK` writer - RTC Real-Time clock lock"]
-pub type RTCLOCK_W<'a> = crate::BitWriter<'a, u16, RTCCTL13_SPEC, bool, 10>;
 impl R {
     #[doc = "Bits 0:1 - RTC Time Event 1"]
     #[inline(always)]
@@ -323,11 +319,6 @@ impl R {
     #[inline(always)]
     pub fn rtccalf(&self) -> RTCCALF_R {
         RTCCALF_R::new(((self.bits >> 8) & 3) as u8)
-    }
-    #[doc = "Bit 10 - RTC Real-Time clock lock"]
-    #[inline(always)]
-    pub fn rtclock(&self) -> RTCLOCK_R {
-        RTCLOCK_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {
@@ -365,11 +356,6 @@ impl W {
     #[inline(always)]
     pub fn rtccalf(&mut self) -> RTCCALF_W {
         RTCCALF_W::new(self)
-    }
-    #[doc = "Bit 10 - RTC Real-Time clock lock"]
-    #[inline(always)]
-    pub fn rtclock(&mut self) -> RTCLOCK_W {
-        RTCLOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

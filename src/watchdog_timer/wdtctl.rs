@@ -34,136 +34,6 @@ impl From<crate::W<WDTCTL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "WDT - Timer Interval Select 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-#[repr(u8)]
-pub enum WDTIS_A {
-    #[doc = "0: WDT - Timer Interval Select: /2G"]
-    WDTIS_0 = 0,
-    #[doc = "1: WDT - Timer Interval Select: /128M"]
-    WDTIS_1 = 1,
-    #[doc = "2: WDT - Timer Interval Select: /8192k"]
-    WDTIS_2 = 2,
-    #[doc = "3: WDT - Timer Interval Select: /512k"]
-    WDTIS_3 = 3,
-    #[doc = "4: WDT - Timer Interval Select: /32k"]
-    WDTIS_4 = 4,
-    #[doc = "5: WDT - Timer Interval Select: /8192"]
-    WDTIS_5 = 5,
-    #[doc = "6: WDT - Timer Interval Select: /512"]
-    WDTIS_6 = 6,
-    #[doc = "7: WDT - Timer Interval Select: /64"]
-    WDTIS_7 = 7,
-}
-impl From<WDTIS_A> for u8 {
-    #[inline(always)]
-    fn from(variant: WDTIS_A) -> Self {
-        variant as _
-    }
-}
-#[doc = "Field `WDTIS` reader - WDT - Timer Interval Select 0"]
-pub type WDTIS_R = crate::FieldReader<u8, WDTIS_A>;
-impl WDTIS_R {
-    #[doc = "Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> WDTIS_A {
-        match self.bits {
-            0 => WDTIS_A::WDTIS_0,
-            1 => WDTIS_A::WDTIS_1,
-            2 => WDTIS_A::WDTIS_2,
-            3 => WDTIS_A::WDTIS_3,
-            4 => WDTIS_A::WDTIS_4,
-            5 => WDTIS_A::WDTIS_5,
-            6 => WDTIS_A::WDTIS_6,
-            7 => WDTIS_A::WDTIS_7,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_0`"]
-    #[inline(always)]
-    pub fn is_wdtis_0(&self) -> bool {
-        *self == WDTIS_A::WDTIS_0
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_1`"]
-    #[inline(always)]
-    pub fn is_wdtis_1(&self) -> bool {
-        *self == WDTIS_A::WDTIS_1
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_2`"]
-    #[inline(always)]
-    pub fn is_wdtis_2(&self) -> bool {
-        *self == WDTIS_A::WDTIS_2
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_3`"]
-    #[inline(always)]
-    pub fn is_wdtis_3(&self) -> bool {
-        *self == WDTIS_A::WDTIS_3
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_4`"]
-    #[inline(always)]
-    pub fn is_wdtis_4(&self) -> bool {
-        *self == WDTIS_A::WDTIS_4
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_5`"]
-    #[inline(always)]
-    pub fn is_wdtis_5(&self) -> bool {
-        *self == WDTIS_A::WDTIS_5
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_6`"]
-    #[inline(always)]
-    pub fn is_wdtis_6(&self) -> bool {
-        *self == WDTIS_A::WDTIS_6
-    }
-    #[doc = "Checks if the value of the field is `WDTIS_7`"]
-    #[inline(always)]
-    pub fn is_wdtis_7(&self) -> bool {
-        *self == WDTIS_A::WDTIS_7
-    }
-}
-#[doc = "Field `WDTIS` writer - WDT - Timer Interval Select 0"]
-pub type WDTIS_W<'a> = crate::FieldWriterSafe<'a, u16, WDTCTL_SPEC, u8, WDTIS_A, 3, 0>;
-impl<'a> WDTIS_W<'a> {
-    #[doc = "WDT - Timer Interval Select: /2G"]
-    #[inline(always)]
-    pub fn wdtis_0(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_0)
-    }
-    #[doc = "WDT - Timer Interval Select: /128M"]
-    #[inline(always)]
-    pub fn wdtis_1(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_1)
-    }
-    #[doc = "WDT - Timer Interval Select: /8192k"]
-    #[inline(always)]
-    pub fn wdtis_2(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_2)
-    }
-    #[doc = "WDT - Timer Interval Select: /512k"]
-    #[inline(always)]
-    pub fn wdtis_3(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_3)
-    }
-    #[doc = "WDT - Timer Interval Select: /32k"]
-    #[inline(always)]
-    pub fn wdtis_4(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_4)
-    }
-    #[doc = "WDT - Timer Interval Select: /8192"]
-    #[inline(always)]
-    pub fn wdtis_5(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_5)
-    }
-    #[doc = "WDT - Timer Interval Select: /512"]
-    #[inline(always)]
-    pub fn wdtis_6(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_6)
-    }
-    #[doc = "WDT - Timer Interval Select: /64"]
-    #[inline(always)]
-    pub fn wdtis_7(self) -> &'a mut W {
-        self.variant(WDTIS_A::WDTIS_7)
-    }
-}
 #[doc = "Field `WDTCNTCL` reader - WDT - Timer Clear"]
 pub type WDTCNTCL_R = crate::BitReader<bool>;
 #[doc = "Field `WDTCNTCL` writer - WDT - Timer Clear"]
@@ -254,7 +124,7 @@ impl<'a> WDTSSEL_W<'a> {
 pub type WDTHOLD_R = crate::BitReader<bool>;
 #[doc = "Field `WDTHOLD` writer - WDT - Timer hold"]
 pub type WDTHOLD_W<'a> = crate::BitWriter<'a, u16, WDTCTL_SPEC, bool, 7>;
-#[doc = "WDT - Timer Password\n\nValue on reset: 0"]
+#[doc = "Watchdog Timer Password\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum WDTPW_A {
@@ -267,7 +137,7 @@ impl From<WDTPW_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `WDTPW` reader - WDT - Timer Password"]
+#[doc = "Field `WDTPW` reader - Watchdog Timer Password"]
 pub type WDTPW_R = crate::FieldReader<u8, WDTPW_A>;
 impl WDTPW_R {
     #[doc = "Get enumerated values variant"]
@@ -284,7 +154,7 @@ impl WDTPW_R {
         *self == WDTPW_A::PASSWORD
     }
 }
-#[doc = "WDT - Timer Password\n\nValue on reset: 0"]
+#[doc = "Watchdog Timer Password\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum WDTPW_AW {
@@ -297,7 +167,7 @@ impl From<WDTPW_AW> for u8 {
         variant as _
     }
 }
-#[doc = "Field `WDTPW` writer - WDT - Timer Password"]
+#[doc = "Field `WDTPW` writer - Watchdog Timer Password"]
 pub type WDTPW_W<'a> = crate::FieldWriter<'a, u16, WDTCTL_SPEC, u8, WDTPW_AW, 8, 8>;
 impl<'a> WDTPW_W<'a> {
     #[doc = "Value which must be written to the Watchdog Password register"]
@@ -306,12 +176,11 @@ impl<'a> WDTPW_W<'a> {
         self.variant(WDTPW_AW::PASSWORD)
     }
 }
+#[doc = "Field `WDTIS` reader - WDT - Timer Interval Select 0"]
+pub type WDTIS_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `WDTIS` writer - WDT - Timer Interval Select 0"]
+pub type WDTIS_W<'a> = crate::FieldWriter<'a, u16, WDTCTL_SPEC, u8, u8, 3, 0>;
 impl R {
-    #[doc = "Bits 0:2 - WDT - Timer Interval Select 0"]
-    #[inline(always)]
-    pub fn wdtis(&self) -> WDTIS_R {
-        WDTIS_R::new((self.bits & 7) as u8)
-    }
     #[doc = "Bit 3 - WDT - Timer Clear"]
     #[inline(always)]
     pub fn wdtcntcl(&self) -> WDTCNTCL_R {
@@ -332,18 +201,18 @@ impl R {
     pub fn wdthold(&self) -> WDTHOLD_R {
         WDTHOLD_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bits 8:15 - WDT - Timer Password"]
+    #[doc = "Bits 8:15 - Watchdog Timer Password"]
     #[inline(always)]
     pub fn wdtpw(&self) -> WDTPW_R {
         WDTPW_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-}
-impl W {
     #[doc = "Bits 0:2 - WDT - Timer Interval Select 0"]
     #[inline(always)]
-    pub fn wdtis(&mut self) -> WDTIS_W {
-        WDTIS_W::new(self)
+    pub fn wdtis(&self) -> WDTIS_R {
+        WDTIS_R::new((self.bits & 7) as u8)
     }
+}
+impl W {
     #[doc = "Bit 3 - WDT - Timer Clear"]
     #[inline(always)]
     pub fn wdtcntcl(&mut self) -> WDTCNTCL_W {
@@ -364,10 +233,15 @@ impl W {
     pub fn wdthold(&mut self) -> WDTHOLD_W {
         WDTHOLD_W::new(self)
     }
-    #[doc = "Bits 8:15 - WDT - Timer Password"]
+    #[doc = "Bits 8:15 - Watchdog Timer Password"]
     #[inline(always)]
     pub fn wdtpw(&mut self) -> WDTPW_W {
         WDTPW_W::new(self)
+    }
+    #[doc = "Bits 0:2 - WDT - Timer Interval Select 0"]
+    #[inline(always)]
+    pub fn wdtis(&mut self) -> WDTIS_W {
+        WDTIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

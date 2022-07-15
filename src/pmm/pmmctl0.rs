@@ -128,6 +128,58 @@ pub type PMMREGOFF_W<'a> = crate::BitWriter<'a, u16, PMMCTL0_SPEC, bool, 4>;
 pub type PMMHPMRE_R = crate::BitReader<bool>;
 #[doc = "Field `PMMHPMRE` writer - PMM Global High Power Module Request Enable"]
 pub type PMMHPMRE_W<'a> = crate::BitWriter<'a, u16, PMMCTL0_SPEC, bool, 7>;
+#[doc = "PMM Password\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum PMMPW_A {
+    #[doc = "150: Values always reads from the PMMCTL0 register"]
+    PASSWORD = 150,
+}
+impl From<PMMPW_A> for u8 {
+    #[inline(always)]
+    fn from(variant: PMMPW_A) -> Self {
+        variant as _
+    }
+}
+#[doc = "Field `PMMPW` reader - PMM Password"]
+pub type PMMPW_R = crate::FieldReader<u8, PMMPW_A>;
+impl PMMPW_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<PMMPW_A> {
+        match self.bits {
+            150 => Some(PMMPW_A::PASSWORD),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `PASSWORD`"]
+    #[inline(always)]
+    pub fn is_password(&self) -> bool {
+        *self == PMMPW_A::PASSWORD
+    }
+}
+#[doc = "PMM Password\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum PMMPW_AW {
+    #[doc = "165: Values which must be written to the PMMCTL0 register"]
+    PASSWORD = 165,
+}
+impl From<PMMPW_AW> for u8 {
+    #[inline(always)]
+    fn from(variant: PMMPW_AW) -> Self {
+        variant as _
+    }
+}
+#[doc = "Field `PMMPW` writer - PMM Password"]
+pub type PMMPW_W<'a> = crate::FieldWriter<'a, u16, PMMCTL0_SPEC, u8, PMMPW_AW, 8, 8>;
+impl<'a> PMMPW_W<'a> {
+    #[doc = "Values which must be written to the PMMCTL0 register"]
+    #[inline(always)]
+    pub fn password(self) -> &'a mut W {
+        self.variant(PMMPW_AW::PASSWORD)
+    }
+}
 impl R {
     #[doc = "Bits 0:1 - PMM Core Voltage Bit: 0"]
     #[inline(always)]
@@ -153,6 +205,11 @@ impl R {
     #[inline(always)]
     pub fn pmmhpmre(&self) -> PMMHPMRE_R {
         PMMHPMRE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bits 8:15 - PMM Password"]
+    #[inline(always)]
+    pub fn pmmpw(&self) -> PMMPW_R {
+        PMMPW_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
 impl W {
@@ -180,6 +237,11 @@ impl W {
     #[inline(always)]
     pub fn pmmhpmre(&mut self) -> PMMHPMRE_W {
         PMMHPMRE_W::new(self)
+    }
+    #[doc = "Bits 8:15 - PMM Password"]
+    #[inline(always)]
+    pub fn pmmpw(&mut self) -> PMMPW_W {
+        PMMPW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
