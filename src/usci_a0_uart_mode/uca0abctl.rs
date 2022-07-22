@@ -47,13 +47,9 @@ pub type UCSTOE_R = crate::BitReader<bool>;
 #[doc = "Field `UCSTOE` writer - Sync-Field Timeout error"]
 pub type UCSTOE_W<'a> = crate::BitWriter<'a, u8, UCA0ABCTL_SPEC, bool, 3>;
 #[doc = "Field `UCDELIM0` reader - Break Sync Delimiter 0"]
-pub type UCDELIM0_R = crate::BitReader<bool>;
+pub type UCDELIM0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UCDELIM0` writer - Break Sync Delimiter 0"]
-pub type UCDELIM0_W<'a> = crate::BitWriter<'a, u8, UCA0ABCTL_SPEC, bool, 4>;
-#[doc = "Field `UCDELIM1` reader - Break Sync Delimiter 1"]
-pub type UCDELIM1_R = crate::BitReader<bool>;
-#[doc = "Field `UCDELIM1` writer - Break Sync Delimiter 1"]
-pub type UCDELIM1_W<'a> = crate::BitWriter<'a, u8, UCA0ABCTL_SPEC, bool, 5>;
+pub type UCDELIM0_W<'a> = crate::FieldWriter<'a, u8, UCA0ABCTL_SPEC, u8, u8, 2, 4>;
 impl R {
     #[doc = "Bit 0 - Auto Baud Rate detect enable"]
     #[inline(always)]
@@ -70,15 +66,10 @@ impl R {
     pub fn ucstoe(&self) -> UCSTOE_R {
         UCSTOE_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - Break Sync Delimiter 0"]
+    #[doc = "Bits 4:5 - Break Sync Delimiter 0"]
     #[inline(always)]
     pub fn ucdelim0(&self) -> UCDELIM0_R {
-        UCDELIM0_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 5 - Break Sync Delimiter 1"]
-    #[inline(always)]
-    pub fn ucdelim1(&self) -> UCDELIM1_R {
-        UCDELIM1_R::new(((self.bits >> 5) & 1) != 0)
+        UCDELIM0_R::new(((self.bits >> 4) & 3) as u8)
     }
 }
 impl W {
@@ -97,15 +88,10 @@ impl W {
     pub fn ucstoe(&mut self) -> UCSTOE_W {
         UCSTOE_W::new(self)
     }
-    #[doc = "Bit 4 - Break Sync Delimiter 0"]
+    #[doc = "Bits 4:5 - Break Sync Delimiter 0"]
     #[inline(always)]
     pub fn ucdelim0(&mut self) -> UCDELIM0_W {
         UCDELIM0_W::new(self)
-    }
-    #[doc = "Bit 5 - Break Sync Delimiter 1"]
-    #[inline(always)]
-    pub fn ucdelim1(&mut self) -> UCDELIM1_W {
-        UCDELIM1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -34,7 +34,51 @@ impl From<crate::W<UCA0IRRCTL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `UCIRRXFE` reader - IrDA receive filter enable"]
+pub type UCIRRXFE_R = crate::BitReader<bool>;
+#[doc = "Field `UCIRRXFE` writer - IrDA receive filter enable"]
+pub type UCIRRXFE_W<'a> = crate::BitWriter<'a, u8, UCA0IRRCTL_SPEC, bool, 0>;
+#[doc = "Field `UCIRRXPL` reader - IrDA receive input UCA0RXD polarity"]
+pub type UCIRRXPL_R = crate::BitReader<bool>;
+#[doc = "Field `UCIRRXPL` writer - IrDA receive input UCA0RXD polarity"]
+pub type UCIRRXPL_W<'a> = crate::BitWriter<'a, u8, UCA0IRRCTL_SPEC, bool, 1>;
+#[doc = "Field `UCIRRXFL0` reader - Receive filter length"]
+pub type UCIRRXFL0_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `UCIRRXFL0` writer - Receive filter length"]
+pub type UCIRRXFL0_W<'a> = crate::FieldWriter<'a, u8, UCA0IRRCTL_SPEC, u8, u8, 6, 7>;
+impl R {
+    #[doc = "Bit 0 - IrDA receive filter enable"]
+    #[inline(always)]
+    pub fn ucirrxfe(&self) -> UCIRRXFE_R {
+        UCIRRXFE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - IrDA receive input UCA0RXD polarity"]
+    #[inline(always)]
+    pub fn ucirrxpl(&self) -> UCIRRXPL_R {
+        UCIRRXPL_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 7:12 - Receive filter length"]
+    #[inline(always)]
+    pub fn ucirrxfl0(&self) -> UCIRRXFL0_R {
+        UCIRRXFL0_R::new(((self.bits >> 7) & 0x3f) as u8)
+    }
+}
 impl W {
+    #[doc = "Bit 0 - IrDA receive filter enable"]
+    #[inline(always)]
+    pub fn ucirrxfe(&mut self) -> UCIRRXFE_W {
+        UCIRRXFE_W::new(self)
+    }
+    #[doc = "Bit 1 - IrDA receive input UCA0RXD polarity"]
+    #[inline(always)]
+    pub fn ucirrxpl(&mut self) -> UCIRRXPL_W {
+        UCIRRXPL_W::new(self)
+    }
+    #[doc = "Bits 7:12 - Receive filter length"]
+    #[inline(always)]
+    pub fn ucirrxfl0(&mut self) -> UCIRRXFL0_W {
+        UCIRRXFL0_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
